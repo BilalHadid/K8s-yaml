@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+  labels:
+    app: myapp
+spec:
+  rules:
+  - host: www.mycoolapp.mydomain.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: mycoolapp
+          servicePort: 80

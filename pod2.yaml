@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynewpod
+spec:
+  containers:
+  - image: alpine
+    name: con3
+    ports:
+    - containerPort: 8080

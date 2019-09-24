@@ -1,0 +1,12 @@
+kind: Pod2
+apiVersion: v1
+metadata: 
+  name: css  labels:
+    type: cssr
+    env:  production
+spec:
+  containers:
+  - name: aamirpinger
+    image: aamirpinger/heloworld
+    ports: 
+    - containerPort: 80

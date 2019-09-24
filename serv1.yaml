@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mynew-ser
+spec:
+  type: ClusterIP
+  selector:
+    app: mypp
+    department: soft
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080

@@ -1,0 +1,11 @@
+nano pod.yamr:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myfirstpod
+spec:
+  containers:
+  - name:con1
+    image: nginx
+    ports:
+    - containerPort: 80 

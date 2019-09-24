@@ -1,0 +1,21 @@
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: deployemnet
+  labels:
+    myapp: app
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp-container
+        image: aamirpinger/helloworld
+        ports:
+        - containerPort: 80

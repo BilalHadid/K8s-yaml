@@ -1,0 +1,19 @@
+apiVersion: 
+kind: ReplicaSet
+metada:
+  name: my-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: my-rs-containers
+        image: aamirpinger/flag:latest
+        ports:
+        - containerPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  selector:
+    matchLabels:
+      app: mypp
+      department: soft
+  replicas: 10
+  template:
+    metadata:
+      labels:
+        app: mypp
+        department: soft
+    spec:
+      containers:
+      - name: hello
+        image: aamirpinger/helloworld

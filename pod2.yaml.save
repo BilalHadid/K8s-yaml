@@ -1,0 +1,10 @@
+apiVersion: pod6
+kind: podetadata:
+  name: kubia-manual
+spec:
+  containers:
+  - image: app-html
+    name: kubia
+    poets:
+    - containerPort: 8080
+      protocol: TCP

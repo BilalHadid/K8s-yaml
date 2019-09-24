@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Services
+metadata:
+  name: mysvx
+  labels:
+    app: myapp
+spec:
+  rules:
+  - host: www.mycoolapp.mydomain.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: mycoolapp
+          servicePort: 80
